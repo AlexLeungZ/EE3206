@@ -6,8 +6,7 @@ public class Calculator {
     public static void main(String[] args) {
         // Check command-line arguments
         if (args.length != 3) {
-            System.out.println(
-                    "Usage: java Calculator operand1 operator operand2");
+            System.out.println("Usage: java Calculator operand1 operator operand2");
             System.exit(0);
         }
 
@@ -17,20 +16,17 @@ public class Calculator {
         // Determine the operator
         switch (args[1].charAt(0)) {
             case '+':
-                result = Integer.parseInt(args[0]) +
-                        Integer.parseInt(args[2]);
+                result = Integer.parseInt(args[0]) + Integer.parseInt(args[2]);
                 break;
             case '-':
-                result = Integer.parseInt(args[0]) -
-                        Integer.parseInt(args[2]);
+                result = Integer.parseInt(args[0]) - Integer.parseInt(args[2]);
                 break;
             case 'x':
-                result = Integer.parseInt(args[0]) *
-                        Integer.parseInt(args[2]);
+            case '*':
+                result = Integer.parseInt(args[0]) * Integer.parseInt(args[2]);
                 break;
             case '/':
-                result = Integer.parseInt(args[0]) /
-                        Integer.parseInt(args[2]);
+                result = Integer.parseInt(args[0]) / Integer.parseInt(args[2]);
         }
 
         // Display result
