@@ -1,10 +1,9 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        String text = "Hello, World.";
-        boolean result = true;
+        System.out.println(message(args));
+    }
 
-        String output = text + result;
-
-        System.out.println(output);
+    public static String message(String... values) {
+        return "Hello, World. " + String.join(" ", values);
     }
 }
