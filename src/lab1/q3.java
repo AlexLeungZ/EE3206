@@ -2,7 +2,7 @@ package lab1;
 
 import java.util.Arrays;
 
-public class q3 {
+public class Q3 {
     public static void main(String[] args) {
         int[] numArr = { 1, 2, 1, 2, 1 };
         System.out.println(hasTriples(numArr));

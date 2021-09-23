@@ -2,7 +2,7 @@ package lab1;
 
 import javax.swing.JOptionPane;
 
-public class q1 {
+public class Q1 {
     public static void main(String[] args) {
         String value = JOptionPane.showInputDialog("Enter something:");
         double halfValue = Double.parseDouble(value) / 2;

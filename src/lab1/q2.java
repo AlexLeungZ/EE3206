@@ -2,7 +2,7 @@ package lab1;
 
 import javax.swing.JOptionPane;
 
-public class q2 {
+public class Q2 {
     public static void main(String[] args) throws Exception {
         for (char c = 'A'; c <= 'Z'; c++) {
             System.out.print(c + " ");
