@@ -1,25 +1,27 @@
 package hw1.s55724681;
 
 public class Rat {
-    private int xPos, yPos;
-    private boolean[][] visited = new boolean[7][7];
+    public int xPos, yPos;
+    int dimensionSize = 7;
+    Maze maze = new Maze(dimensionSize);
     public boolean inside;
+    public String type = "Rat";
 
     public Rat() { // Default Constructor
         this.xPos = 0;
         this.yPos = 0;
-        this.visited[0][0] = true;
+        maze.visited[0][0] = true;
         this.inside = true;
     }
 
     public void setPos(int newX, int newY) { // Method to set the mouse's new position
         this.xPos = newX;
         this.yPos = newY;
-        this.visited[newX][newY] = true;
+        maze.visited[newX][newY] = true;
     }
 
     private boolean gameover() { // Check if the mouse is stuck or is at the exit
-        if (this.xPos == 6 && this.yPos == 6) { // Check if it is at the exit
+        if (this.xPos == dimensionSize - 1 && this.yPos == dimensionSize - 1) { // Check if it is at the exit
             this.inside = false;
             return true;
         }
@@ -33,20 +35,13 @@ public class Rat {
 
     private static char roll() { // Roll the dice to decide the direction the mouse is going to
         double dice = Math.random();
-        return (dice <= 0.36) ? 'N' : (dice <= 0.7) ? 'E' : (dice <= 0.9) ? 'S' : 'W';
-        // double dice2 = Math.random();
-        // if(dice <= 0.6)
-        // if(dice2 < 0.5) return 'N';
-        // else return 'E';
-        // else
-        // if(dice2 < 0.5) return 'S';
-        // else return 'W';
+        return (dice <= 0.3) ? 'N' : (dice <= 0.6) ? 'E' : (dice <= 0.8) ? 'S' : 'W';
     }
 
     private boolean validmove(int xPos, int yPos) {
-        if ((xPos < 0) || (yPos < 0) || (xPos > 6) || (yPos > 6))
+        if ((xPos < 0) || (yPos < 0) || (xPos > dimensionSize - 1) || (yPos > dimensionSize - 1))
             return false;
-        if (visited[xPos][yPos])
+        if (maze.visited[xPos][yPos])
             return false;
         return true;
     }
