@@ -8,8 +8,7 @@ public final class Address {
     private String zip;
 
     /** Create an address with street, city, state, and zip */
-    public Address(String street, String city,
-            String state, String zip) {
+    public Address(String street, String city, String state, String zip) {
         this.street = street;
         this.city = city;
         this.state = state;

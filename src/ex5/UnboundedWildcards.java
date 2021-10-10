@@ -19,7 +19,9 @@ public class UnboundedWildcards {
         List<String> ls = Arrays.asList("one", "two", "three");
         printList(li);
         UnboundedWildcards.<String>printList2(ls);
-        //printList3(li);
+
+        // printList2(ls);
+        // printList3(li);
     }
 
     public static void printList3(List<Object> list) {
@@ -28,9 +30,9 @@ public class UnboundedWildcards {
         }
         System.out.println();
     }
-    
+
     // this is a generic method
-    public static <T>void printList2(List<T> list) {
+    public static <T> void printList2(List<T> list) {
         for (Object elem : list) {
             System.out.print(elem + " ");
         }
@@ -38,7 +40,7 @@ public class UnboundedWildcards {
     }
 
     // this is not a generic method
-    public static void printList(List<?> list) {    
+    public static void printList(List<?> list) {
         for (Object elem : list) {
             System.out.print(elem + " ");
         }

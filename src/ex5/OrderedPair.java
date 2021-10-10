@@ -30,9 +30,19 @@ public class OrderedPair<K, V> implements Pair<K, V> {
         return value;
     }
 
+    @Override
+    public String toString() {
+        return "OrderedPair [key=" + key + ", value=" + value + "]";
+    }
+
     public static void main(String[] args) {
         Pair<String, Integer> p1 = new OrderedPair<>("Even", 8);
         Pair<String, String> p2 = new OrderedPair<>("hello", "world");
         Pair<String, GBox<Integer>> p3 = new OrderedPair<>("hello", new GBox<Integer>());
+
+        System.out.println(p1);
+        System.out.println(p2);
+        System.out.println(p3);
     }
+
 }

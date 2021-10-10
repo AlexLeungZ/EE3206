@@ -12,8 +12,7 @@ public class Loan {
         this(7.5, 30, 100000);
     }
 
-    public Loan(double annualInterestRate, int numberOfYears,
-            double loanAmount) {
+    public Loan(double annualInterestRate, int numberOfYears, double loanAmount) {
         this.annualInterestRate = annualInterestRate;
         this.numberOfYears = numberOfYears;
         this.loanAmount = loanAmount;
@@ -53,8 +52,7 @@ public class Loan {
     /** Find monthly payment */
     public double getMonthlyPayment() {
         double monthlyInterestRate = annualInterestRate / 1200;
-        return loanAmount * monthlyInterestRate / (1 -
-                (Math.pow(1 / (1 + monthlyInterestRate), numberOfYears * 12)));
+        return loanAmount * monthlyInterestRate / (1 - (Math.pow(1 / (1 + monthlyInterestRate), numberOfYears * 12)));
     }
 
     /** Find total payment */
