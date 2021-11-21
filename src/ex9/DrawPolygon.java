@@ -37,11 +37,18 @@ public class DrawPolygon extends JFrame {
 
             // Add points to the polygon
             polygon.addPoint(xCenter + radius, yCenter);
-            polygon.addPoint((int) (xCenter + radius * Math.cos(2 * Math.PI / 6)), (int) (yCenter - radius * Math.sin(2 * Math.PI / 6)));
-            polygon.addPoint((int) (xCenter + radius * Math.cos(2 * 2 * Math.PI / 6)), (int) (yCenter - radius * Math.sin(2 * 2 * Math.PI / 6)));
-            polygon.addPoint((int) (xCenter + radius * Math.cos(3 * 2 * Math.PI / 6)), (int) (yCenter - radius * Math.sin(3 * 2 * Math.PI / 6)));
-            polygon.addPoint((int) (xCenter + radius * Math.cos(4 * 2 * Math.PI / 6)), (int) (yCenter - radius * Math.sin(4 * 2 * Math.PI / 6)));
-            polygon.addPoint((int) (xCenter + radius * Math.cos(5 * 2 * Math.PI / 6)), (int) (yCenter - radius * Math.sin(5 * 2 * Math.PI / 6)));
+            polygon.addPoint((int) (xCenter + radius * Math.cos(1 * 2 * Math.PI / 7)),
+                    (int) (yCenter - radius * Math.sin(1 * 2 * Math.PI / 7)));
+            polygon.addPoint((int) (xCenter + radius * Math.cos(2 * 2 * Math.PI / 7)),
+                    (int) (yCenter - radius * Math.sin(2 * 2 * Math.PI / 7)));
+            polygon.addPoint((int) (xCenter + radius * Math.cos(3 * 2 * Math.PI / 7)),
+                    (int) (yCenter - radius * Math.sin(3 * 2 * Math.PI / 7)));
+            polygon.addPoint((int) (xCenter + radius * Math.cos(4 * 2 * Math.PI / 7)),
+                    (int) (yCenter - radius * Math.sin(4 * 2 * Math.PI / 7)));
+            polygon.addPoint((int) (xCenter + radius * Math.cos(5 * 2 * Math.PI / 7)),
+                    (int) (yCenter - radius * Math.sin(5 * 2 * Math.PI / 7)));
+            polygon.addPoint((int) (xCenter + radius * Math.cos(6 * 2 * Math.PI / 7)),
+                    (int) (yCenter - radius * Math.sin(6 * 2 * Math.PI / 7)));
 
             // Draw the polygon
             g.drawPolygon(polygon);

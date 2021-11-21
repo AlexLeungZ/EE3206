@@ -27,7 +27,7 @@ public class TestPanelDrawing extends JFrame {
             super.paintComponent(g);
             g.drawLine(0, 0, 50, 50);
             g.setColor(Color.red);
-            g.drawString("Banner " + x++, 0, 40);
+            g.drawString("Banner " + x++, 0, 50);
 
         }
     }
