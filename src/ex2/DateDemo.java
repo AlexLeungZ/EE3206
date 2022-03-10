@@ -9,8 +9,8 @@ import java.util.Date;
 public class DateDemo {
 
     public static void main(String[] args) {
-        //System.out.println(System.currentTimeMillis());
-        System.out.println(new Date(System.currentTimeMillis() + 60*60*1000));
+        // System.out.println(System.currentTimeMillis());
+        System.out.println(new Date(System.currentTimeMillis() + 60 * 60 * 1000));
     }
 
 }

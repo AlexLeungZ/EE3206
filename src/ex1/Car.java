@@ -7,8 +7,8 @@ package ex1;
  */
 class Car {
 
-    int speed;          // kilometer per hour
-    int distance;       // kilometer
+    int speed; // kilometer per hour
+    int distance; // kilometer
     static int numOfCars = 0;
 
     void build(int s, int d) {

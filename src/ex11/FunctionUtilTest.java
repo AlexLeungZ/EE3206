@@ -5,7 +5,6 @@
  */
 package ex11;
 
-
 import static ex11.Person.Gender.MALE;
 import java.util.List;
 
@@ -16,7 +15,7 @@ import java.util.List;
 public class FunctionUtilTest {
 
     public static void main(String[] args) {
-        
+
         List<Person> list = Person.createShortList();
 
         // Use forEach() method to print each person in the list

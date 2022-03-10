@@ -74,17 +74,17 @@ public class Matrix {
     public String toString() {
 
         StringBuilder sb = new StringBuilder();
-        Formatter fmt = new Formatter(sb);
-        int row = this.elements.length;
-        int col = this.elements[0].length;
+        try (Formatter fmt = new Formatter(sb)) {
+            int row = this.elements.length;
+            int col = this.elements[0].length;
 
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
-                fmt.format("[%2d]", this.elements[i][j]);
+            for (int i = 0; i < row; i++) {
+                for (int j = 0; j < col; j++) {
+                    fmt.format("[%2d]", this.elements[i][j]);
+                }
+                fmt.format("%n");
             }
-            fmt.format("%n");
         }
-
         return sb.toString();
     }
 

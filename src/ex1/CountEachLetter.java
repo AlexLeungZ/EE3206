@@ -25,7 +25,7 @@ public class CountEachLetter {
 
         // Display the result
         System.out.println(output);
-        //JOptionPane.showMessageDialog(null, output);
+        // JOptionPane.showMessageDialog(null, output);
     }
 
     // Count each letter in the string
