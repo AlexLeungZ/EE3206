@@ -1,2 +1,2 @@
-# EE3206 Java
+# EE3206 Java Programming and Applications
 
